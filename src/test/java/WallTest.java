@@ -15,6 +15,20 @@ public class WallTest {
     }
 
     @Test
+    public void shouldReturn5AsTheNumberOfBlocksInside(){
+        Block block1 = new BlockImpl("Green","Wood");
+        Block block2 = new BlockImpl("Blue","Steel");
+        Block block3 = new BlockImpl("Black","Wood");
+        Block block4 = new BlockImpl("Yellow","Plastic");
+        Block block5 = new BlockImpl("Red","Plastic");
+        Wall emptyWall = new Wall(block1,block2,block3,block4,block5);
+
+        Assert.assertEquals(5,emptyWall.count());
+    }
+
+
+
+    @Test
     public void shouldReturnBlockFoundByColor(){
         Block block1 = new BlockImpl("Green","Wood");
         Block block2 = new BlockImpl("Blue","Steel");
